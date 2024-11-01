@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+/*
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Outfit", sans-serif;
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    text-decoration: none;
+
+    transition: all .3s ease-in;
+}
+
+:root {
+    --font-body: "Outfit", sans-serif;
+    --font-heading: "Plus Jakarta Sans", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.desktop-width {
+    max-width: 130rem;
+    margin: 0rem auto;
+}
+
+.section-bottom-gap {
+    margin-bottom: 12rem;
+}
+
+
+/* header: start */
+header {
+    background: transparent;
+    padding: 2.4rem 0rem;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo img {
+    width: 14rem;
+    height: auto;
+    object-fit: contain;
+}
+
+nav .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.6rem;
+}
+
+nav a {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+.cta-style {
+    font-family: var(--font-body);
+    padding: 1.6rem 2.4rem;
+    border-radius: 1.6rem;
+    background: #ffffff;
+    color: #333333;
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+/* header: end */
+
+
+
+/* hero: start */
+.hero {
+    /* background: #000000; */
+    background: url('../assets/hero/hero_background.webp') no-repeat center center/cover;
+    padding: 7.2rem;
+
+
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+    padding-top: 7.2rem;
+}
+
+.hero-main-heading {
+    font-family: var(--font-heading);
+    font-size: 7.2rem;
+    font-weight: 700;
+    color: white;
+
+    margin-bottom: 1.8rem;
+}
+
+.hero-image {
+    width: 42rem;
+    height: auto;
+    object-fit: contain;
+}
+
+.hero-main-para {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 150%;
+    color: #C7D5D3;
+
+    margin-bottom: 4.4rem;
+}
+
+.hero-image-content {
+    position: relative;
+}
+
+.hero-image-text {
+    position: absolute;
+}
+
+.hero-image-text-1 {
+    width: 16rem;
+    height: auto;
+    object-fit: contain;
+    top: 24%;
+    right: -10rem;
+}
+
+.hero-image-text-2 {
+    width: 30rem;
+    height: auto;
+    object-fit: contain;
+    top: 50%;
+    left: -20rem;
+}
+
+.btn-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4.8rem;
+}
+
+.users {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.2rem;
+}
+
+.users img {
+    width: 18rem;
+    height: auto;
+    object-fit: contain;
+}
+
+.user-heading {
+    font-family: var(--font-body);
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.user-para {
+    font-family: var(--font-body);
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #C7D5D3;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9.6rem;
+
+    /* margin: 8rem 0rem; */
+    margin-top: 8rem;
+    margin-bottom: 2.4rem;
+}
+
+.logos img {
+    height: 4.5rem;
+    width: auto;
+    object-fit: contain;
+}
+
+/* hero: end */
+
+/* gpt animation: start */
+/* Keyframes for animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Hero animations */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+    padding-top: 7.2rem;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.hero-main-heading {
+    font-family: var(--font-heading);
+    font-size: 7.2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.8rem;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards 0.2s;
+}
+
+.hero-main-para {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 150%;
+    color: #C7D5D3;
+    margin-bottom: 4.4rem;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards 0.4s;
+}
+
+.cta-style {
+    font-family: var(--font-body);
+    padding: 1.6rem 2.4rem;
+    border-radius: 1.6rem;
+    background: #ffffff;
+    color: #333333;
+    font-weight: 500;
+    font-size: 1.8rem;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards 0.6s;
+}
+
+.users {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.2rem;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards 0.8s;
+}
+
+.hero-image-content {
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards 0.6s;
+}
+
+.hero-image-text-1 {
+    width: 16rem;
+    height: auto;
+    object-fit: contain;
+    top: 24%;
+    right: -10rem;
+    opacity: 0;
+    animation: slideInRight 1.2s ease forwards 0.8s;
+}
+
+.hero-image-text-2 {
+    width: 30rem;
+    height: auto;
+    object-fit: contain;
+    top: 50%;
+    left: -20rem;
+    opacity: 0;
+    animation: slideInLeft 1.2s ease forwards 1s;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9.6rem;
+    margin-top: 8rem;
+    margin-bottom: 2.4rem;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 1.2s;
+}
+
+/* gpt animation: end */
+
+
+
+/* know-me: start */
+.know-me-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4.8rem;
+}
+
+.general-heading {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 4.8rem;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #343434;
+
+    margin-bottom: 1.8rem;
+}
+
+.general-para {
+    font-family: var(--font-body);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 150%;
+    color: #5D5D5D;
+}
+
+.know-me-image img {
+    width: 56rem;
+    height: auto;
+    object-fit: contain;
+}
+
+.black-cta {
+    background: #292D32;
+    color: #ffffff;
+}
+
+.margin-for-cta {
+    margin-bottom: 6.4rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* know-me: end */
+
+
+
+/* feature: start */
+.card-heading {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 2.4rem;
+    line-height: 120%;
+    color: #000000;
+}
+
+.read-more-btn span {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 150%;
+    color: #000000;
+}
+
+.read-more-btn img {
+    width: 2.8rem;
+    height: auto;
+    object-fit: contain;
+}
+
+.read-more-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .8rem;
+    cursor: pointer;
+}
+
+.read-more-btn:hover {
+    gap: 1.2rem;
+}
+
+.feature-image {
+    /* width: 24rem; */
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.feature-outer-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+}
+
+/* feature: end */
