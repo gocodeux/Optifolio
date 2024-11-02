@@ -399,6 +399,11 @@ nav a {
 
 
 /* feature: start */
+.feature {
+    background: url("../assets/features/feature_bg.webp") no-repeat center center/cover;
+    padding: 12rem 0rem;
+}
+
 .section-heading {
     max-width: 60rem;
     margin: 0rem auto;
@@ -452,6 +457,8 @@ nav a {
     align-items: flex-start;
     justify-content: center;
     gap: 3.2rem;
+
+    margin-bottom: 5.2rem;
 }
 
 .para-margin-bottom-32 {
@@ -469,4 +476,77 @@ nav a {
 .para-margin-bottom-08 {
     margin-bottom: .8rem;
 }
+
+.view-more-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* feature: end */
+
+
+
+/* blog: start */
+.heading-h5 {
+    font-family: var(--font-heading);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 120%;
+    color: #010707;
+}
+
+.date {
+    font-family: var(--font-body);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #5D5D5D;
+}
+
+.blog-outer-box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3.2rem;
+}
+
+.small-card-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2.4rem;
+}
+
+.small-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2.4rem;
+}
+
+.small-card img {
+    width: 25rem;
+    height: auto;
+    object-fit: contain;
+}
+
+.big-card-box .blog-big-image {
+    width: 76rem;
+    height: auto;
+    object-fit: contain;
+
+    margin-bottom: 1.6rem;
+}
+
+.big-blog-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.6rem;
+}
+/* blog: end */
